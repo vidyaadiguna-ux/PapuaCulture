@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebudayaan Papua Kultur - Website Edukasi</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS DITINGKATKAN */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #e0b463; /* Warna dasar tanah/krem */
+            color: #333; /* Warna teks default */
+        }
+
+        header {
+            background: #6d4504; /* Coklat tua */
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        h2 {
+            background: #ea8e25; /* Oranye/Coklat cerah */
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 25px; /* Tambahkan ruang setelah heading */
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            /* Fleksibilitas yang lebih baik (minimal 300px) */
+            flex: 1 1 300px; 
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+            /* Transisi lebih hidup (cubic-bezier untuk efek memantul) */
+            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            overflow: hidden;
+            
+            /* Animasi Scroll (default sebelum muncul) */
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        /* Ketika elemen terlihat */
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px; /* Atur tinggi tetap untuk konsistensi */
+            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #6d4504;
+            margin-top: 0;
+        }
+
+        /* MEDIA QUERY UNTUK RESPONSIVITAS */
+        @media(max-width: 900px) {
+            .card {
+                /* Dua kolom untuk tablet */
+                flex: 1 1 calc(50% - 10px); 
+            }
+        }
+
+        @media(max-width: 600px) {
+            .card {
+                /* Satu kolom untuk mobile */
+                flex: 1 1 100%; 
+            }
+        }
+
+        footer {
+            background: #515f04; /* Hijau kecoklatan */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px; 
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PAPUA CULTURE</h1>
+        <p>Beragam kekayaan alam dan budaya dari Tanah Papua</p>
+    </header>
+
+    <section class="section">
+        <h2>Pesona Alam Papua</h2>
+        <div class="container">
+            <div class="card">
+                <img src="raja ampat.jpeg" alt="Pemandangan indah gugusan pulau karst Raja Ampat di atas laut biru jernih.">
+                <h3>Raja Ampat</h3>
+                <p>Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua. Perairan Kepulauan Raja Ampat dikenal sebagai kawasan laut terkaya dengan keanekaragaman hayati tertinggi di dunia, memiliki sebaran 574 spesies terumbu karang dan 553 jenis ikan karang.</p>
+            </div>
+
+            <div class="card">
+                <img src="Anggopi.jpeg" alt="Pantai Anggopi di Biak dengan pasir putih dan air laut biru jernih, dikelilingi vegetasi hijau.">         
+                <h3>Pantai Anggopi, Biak</h3>
+                <p>Pantai Anggopi terletak di desa Adoki, Yendidori, Kabupaten Biak Numfor. Tempat ini menawarkan keindahan alam pesisir dengan air laut yang jernih dan pantai berpasir putih. Suasananya yang unik dan tenang menjadikannya destinasi wisata air yang mengesankan. Dari pusat kota Biak, pantai ini dapat ditempuh sekitar 15-20 menit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Tarian Adat Papua</h2>
+        <div class="container">
+            <div class="card">
+                <img src="tarian-yospan-papua-76an-dom.jpg" alt="Penari Yospan Papua mengenakan pakaian tradisional menari dengan gerakan dinamis.">
+                <h3>Tari Yospan</h3>
+                <p>Tari Yospan (Yosim Pancar) adalah tarian pergaulan khas Papua yang berakar dari Biak. Tarian ini melambangkan kegembiraan dan kebersamaan, dengan gerakan-gerakan dinamis yang dipengaruhi oleh budaya militer dan musik modern (seperti Polonaise dan Waltz) yang masuk melalui Biak. Tari ini kini menjadi simbol rasa syukur dan persahabatan.</p>
+            </div>
+
+            <div class="card">
+                <img src="tari_perang.jpg" alt="Penari Tari Perang Papua dengan busana adat lengkap, senjata tradisional, dan hiasan kepala.">
+                <h3>Tari Perang</h3>
+                <p>Tari Perang adalah salah satu tarian penyambut wisatawan yang datang ke Papua. Makna tarian ini lebih dari sekadar gerakan; ia adalah bentuk rasa syukur kepada Sang Pencipta dan juga menampilkan **keberanian, kegagahan, dan semangat juang** masyarakat Papua. Biasanya penari mengenakan atribut khas seperti tombak, panah, dan perisai.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Pakaian Adat Papua</h2>
+        <div class="container">
+            <div class="card">
+                <img src="koteka.jpg" alt="Seorang pria Papua mengenakan Koteka, penutup kemaluan tradisional dari labu.">
+                <h3>Koteka</h3>
+                <p>Koteka adalah pakaian tradisional pria dari suku-suku tertentu di Papua, dibuat dari labu hutan yang dikeringkan (Lagenaria siceraria). Koteka bukan hanya sekadar penutup tubuh, melainkan **simbol kehormatan, kedewasaan, dan jati diri** bagi masyarakat yang mengenakannya, seperti Suku Dani dan Lani.</p>
+            </div>
+
+            <div class="card">
+                <img src="rok-rumbai.jpg" alt="Wanita Papua mengenakan Rok Rumbai dari serat tumbuhan kering.">
+                <h3>Rok Rumbai</h3>
+                <p>Rok Rumbai adalah pakaian adat wanita dan pelengkap untuk pria, dibuat dari **serat tumbuh-tumbuhan** atau daun sagu yang dikeringkan dan dirangkai. Pakaian ini dikenakan di pinggang dan jatuh menjuntai ke bawah, melambangkan kekayaan alam dan kesederhanaan hidup masyarakat adat Papua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Senjata Tradisional Papua</h2>
+        <div class="container">
+            <div class="card">
+                <img src="busur panah.jpg" alt="Senjata tradisional Busur dan Panah Papua (panah supa) dari kayu dan bambu.">
+                <h3>Busur dan Panah (Panah Supa)</h3>
+                <p>Panah Supa adalah jenis senjata tradisional dari Papua, khususnya di wilayah Pegunungan. Senjata ini terdiri dari busur (terbuat dari kayu/bambu) dan anak panah (dari bambu atau buluh), yang digunakan secara turun-temurun sebagai **alat berburu dan alat perang** antar suku di masa lalu.</p>
+            </div>
+
+            <div class="card">
+                <img src="belati kasuari.jpg" alt="Belati (Pisuwe) yang terbuat dari tulang Kasuari, dihiasi dengan bulu.">
+                <h3>Belati dari Tulang Kasuari (Pisuwe)</h3>
+                <p>Pisuwe adalah belati dari Pulau Papua, yang paling khas dibuat dari **tulang burung Kasuari** atau terkadang tulang femur manusia (Ndampisuwe). Belati ini memiliki nilai ritual dan simbolis yang tinggi, dulunya digunakan dalam ritual tertentu, dan kini menjadi bagian penting dari atribut tari dan upacara adat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Makanan Khas Papua</h2>
+        <div class="container">
+            <div class="card">
+                <img src="papeda.webp" alt="Papeda, makanan pokok khas Papua, disajikan bersama Ikan Kuah Kuning dan sayuran.">
+                <h3>Papeda</h3>
+                <p>Papeda adalah makanan pokok masyarakat Papua, terbuat dari **pati sagu** yang diolah hingga menjadi bubur kental berwarna putih bening dengan tekstur lengket. Papeda biasanya disajikan bersama **Ikan Kuah Kuning** yang kaya rempah, dan menjadi simbol persatuan dan kekerabatan.</p>
+            </div>
+
+            <div class="card">
+                <img src="ikan bakar.jpg" alt="Ikan Bakar Manokwari dengan sambal pedas khas Manokwari.">
+                <h3>Ikan Bakar Manokwari</h3>
+                <p>Ikan Bakar Manokwari adalah hidangan ikan bakar yang terkenal dengan **sambal mentahnya** yang khas dan sangat pedas, terbuat dari cabai, tomat, dan rempah-rempah lainnya. Sambal tersebut tidak dimasak, melainkan langsung dilumuri pada ikan yang sudah dibakar, menciptakan rasa yang unik dan segar.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Kebudayaan Papua | Website Edukasi Keberagaman Papua Culture
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    // Opsional: Hentikan observasi setelah card muncul
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            // Threshold 0.1: Card akan muncul saat 10% dari elemen terlihat
+            threshold: 0.1 
+        });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
